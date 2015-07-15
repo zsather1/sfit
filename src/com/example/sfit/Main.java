@@ -1,12 +1,15 @@
 package com.example.sfit;
 
+import java.util.ArrayList;
 import java.util.Locale;
+import java.util.Map;
 
 import android.app.Activity;
 import android.app.ActionBar;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.app.ListFragment;
 import android.support.v13.app.FragmentPagerAdapter;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;	
@@ -16,6 +19,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
 public class Main extends Activity {
@@ -86,6 +90,10 @@ public class Main extends Activity {
 			// getItem is called to instantiate the fragment for the given page.
 			// Return a PlaceholderFragment (defined as a static inner class
 			// below).
+			/*
+			Fragment toReturn = new ContentFram
+			return
+			*/ 
 			return PlaceholderFragment.newInstance(position + 1);
 		}
 
@@ -133,17 +141,37 @@ public class Main extends Activity {
 
 		public PlaceholderFragment() {
 		}
+		
 
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container,
 				Bundle savedInstanceState) {
+			int sect_num = -1;
 			
 			if(getArguments() != null){
-				int sect_num = getArguments().getInt(ARG_SECTION_NUMBER);
+				sect_num = getArguments().getInt(ARG_SECTION_NUMBER);
 				System.out.println(sect_num);
 			}
-			View rootView = inflater.inflate(R.layout.fragment_main, container,
-					false);
+			View rootView = inflater.inflate(R.layout.fragment_main, container,false);
+			
+			if (sect_num == 2){
+				rootView = inflater.inflate(R.layout.fragment_challenge, container,false);
+				return rootView;
+			}
+			if (sect_num == 3){
+				rootView = inflater.inflate(R.layout.fragment_rewards, container,false);
+				return rootView;
+			}
+					
+			TextView t = (TextView) rootView.findViewById(R.id.section_label);
+			t.append("" + sect_num);
+			TextView ed1 = (TextView) rootView.findViewById(R.id.editText1);
+			TextView ed2 = (TextView) rootView.findViewById(R.id.editText2);
+			TextView ed3 = (TextView) rootView.findViewById(R.id.editText3);
+			ed1.append(" here ");
+			ed2.append(" second");
+			ed3.append(" 5 ");
+			
 			return rootView;
 		}
 	}
