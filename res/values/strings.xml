@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">sfit</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_challenges">Challenges</string>
+    <string name="title_activity_rewards">Rewards</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_tabs_fragment_page_adapter">TabsFragmentPageAdapter</string>
+    <string name="title_activity_chanllenges_fragment">ChanllengesFragment</string>
+
+</resources>

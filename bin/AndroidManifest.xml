@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sfit"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="22"
+        android:targetSdkVersion="22" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".Profile"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Challenges"
+            android:label="@string/title_activity_challenges" >
+        </activity>
+        <activity
+            android:name=".Rewards"
+            android:label="@string/title_activity_rewards" >
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main" >
+        </activity>
+        <activity
+            android:name=".TabsFragmentPageAdapter"
+            android:label="@string/title_activity_tabs_fragment_page_adapter" >
+        </activity>
+        <activity
+            android:name=".ChanllengesFragment"
+            android:label="@string/title_activity_chanllenges_fragment" >
+        </activity>
+    </application>
+
+</manifest>
