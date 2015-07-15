@@ -9,7 +9,7 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.support.v13.app.FragmentPagerAdapter;
 import android.os.Bundle;
-import android.support.v4.view.ViewPager;
+import android.support.v4.view.ViewPager;	
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -18,7 +18,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-public class Rewards extends Activity {
+public class Main extends Activity {
 
 	/**
 	 * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -29,6 +29,7 @@ public class Rewards extends Activity {
 	 */
 	SectionsPagerAdapter mSectionsPagerAdapter;
 
+
 	/**
 	 * The {@link ViewPager} that will host the section contents.
 	 */
@@ -37,7 +38,9 @@ public class Rewards extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_rewards);
+		setContentView(R.layout.activity_main);
+		
+		
 
 		// Create the adapter that will return a fragment for each of the three
 		// primary sections of the activity.
@@ -52,7 +55,7 @@ public class Rewards extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.rewards, menu);
+		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 
@@ -134,8 +137,13 @@ public class Rewards extends Activity {
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container,
 				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(R.layout.fragment_rewards,
-					container, false);
+			
+			if(getArguments() != null){
+				int sect_num = getArguments().getInt(ARG_SECTION_NUMBER);
+				System.out.println(sect_num);
+			}
+			View rootView = inflater.inflate(R.layout.fragment_main, container,
+					false);
 			return rootView;
 		}
 	}

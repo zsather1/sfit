@@ -30,19 +30,15 @@ public final class R {
         public static final int section_label=0x7f080001;
     }
     public static final class layout {
-        public static final int activity_challenges=0x7f030000;
-        public static final int activity_main=0x7f030001;
-        public static final int activity_profile=0x7f030002;
-        public static final int activity_rewards=0x7f030003;
-        public static final int fragment_challenges=0x7f030004;
-        public static final int fragment_profile=0x7f030005;
-        public static final int fragment_rewards=0x7f030006;
+        public static final int activity_main=0x7f030000;
+        public static final int fragment_main=0x7f030001;
     }
     public static final class menu {
         public static final int challenges=0x7f070000;
         public static final int chanllenges=0x7f070001;
-        public static final int profile=0x7f070002;
-        public static final int rewards=0x7f070003;
+        public static final int main=0x7f070002;
+        public static final int profile=0x7f070003;
+        public static final int rewards=0x7f070004;
     }
     public static final class string {
         public static final int action_settings=0x7f050005;
